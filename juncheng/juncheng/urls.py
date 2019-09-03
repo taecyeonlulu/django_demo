@@ -17,11 +17,8 @@ Including another URLconf
 
 from django.urls import path,include
 
-from . import views,testdb
 
 urlpatterns = [
-    path('hello/', views.hello),
-    path('testdb/', testdb.testdb),
     path('',include('user.urls')),
     path('',include('login.urls')),
 ]
